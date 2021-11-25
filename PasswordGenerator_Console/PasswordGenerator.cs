@@ -55,7 +55,7 @@ namespace PasswordGeneratorConsoleApp
             char[] characters = new char[length];
             for (int i = 0; i < length; i++)
             {
-                characters[i] = validPasswordCharacters[random.Next(minimumLength, validPasswordCharacters.Length)];
+                characters[i] = validPasswordCharacters[random.Next(0, validPasswordCharacters.Length - 1)];
             }
 
             password = new string(characters);
